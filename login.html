@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Pemilih - PEMIRA UWKS 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 p-4">
+        <div class="max-w-7xl mx-auto flex items-center gap-4">
+            <img src="assets/logo-uwks.png" alt="Logo UWKS" class="w-10 h-10 rounded-lg">
+            <div>
+                <h1 class="text-sm font-bold text-gray-800 uppercase leading-none">Sistem E-Voting</h1>
+                <p class="text-[10px] font-bold text-gray-500 uppercase italic">Universitas Wijaya Kusuma Surabaya</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center px-4 py-12">
+        <div class="max-w-md w-full">
+            
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-extrabold text-gray-900 uppercase tracking-tight text-blue-900">Login Mahasiswa</h2>
+                <p class="text-sm text-gray-500 mt-2 font-medium">Silakan masukkan data diri untuk memberikan suara.</p>
+            </div>
+
+            <!-- Card Login -->
+            <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
+                <form action="#" class="space-y-5">
+                    
+                    <!-- Input Nama -->
+                    <div class="space-y-2">
+                        <label for="nama" class="block text-xs font-bold text-gray-600 uppercase tracking-widest">
+                            Nama Lengkap
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400">
+                                <i class="fa-solid fa-user text-sm"></i>
+                            </span>
+                            <input 
+                                type="text" 
+                                id="nama" 
+                                name="nama" 
+                                placeholder="Masukkan Nama Sesuai KTM"
+                                class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-blue-900 outline-none transition-all placeholder:text-gray-400 text-sm font-medium"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Input NPM -->
+                    <div class="space-y-2">
+                        <label for="npm" class="block text-xs font-bold text-gray-600 uppercase tracking-widest">
+                            NPM (Nomor Pokok Mahasiswa)
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400">
+                                <i class="fa-solid fa-id-card text-sm"></i>
+                            </span>
+                            <input 
+                                type="text" 
+                                id="npm" 
+                                name="npm" 
+                                placeholder="Contoh: 231200XX"
+                                class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-blue-900 outline-none transition-all placeholder:text-gray-400 text-sm font-medium"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Input Password -->
+                    <div class="space-y-2">
+                        <label for="password" class="block text-xs font-bold text-gray-600 uppercase tracking-widest">
+                            Password
+                        </label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400">
+                                <i class="fa-solid fa-lock text-sm"></i>
+                            </span>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Masukkan Password Anda"
+                                class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-900 focus:border-blue-900 outline-none transition-all placeholder:text-gray-400 text-sm font-medium"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Button Submit -->
+                    <div class="pt-4">
+                        <button 
+                            type="submit" 
+                            class="w-full bg-blue-900 hover:bg-blue-950 text-white font-bold py-4 rounded-xl shadow-lg transition-all transform active:scale-[0.98] uppercase tracking-wider text-sm flex items-center justify-center gap-2"
+                        >
+                            <i class="fa-solid fa-right-to-bracket"></i> Masuk Bilik Suara
+                        </button>
+                    </div>
+
+                </form>
+
+                <!-- Footer Card -->
+                <div class="mt-8 pt-6 border-t border-gray-100">
+                    <div class="flex items-start gap-3 bg-yellow-50 p-3 rounded-lg border border-yellow-100">
+                        <i class="fa-solid fa-circle-info text-yellow-600 mt-0.5"></i>
+                        <p class="text-[10px] text-yellow-800 leading-relaxed font-semibold uppercase">
+                            Pastikan data benar. Setiap mahasiswa hanya memiliki satu kali kesempatan memilih. Kerahasiaan suara dijamin sistem.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Page -->
+            <p class="text-center mt-8 text-[10px] font-bold text-gray-400 uppercase tracking-widest">
+                Panitia PEMIRA &copy; 2026 Informatika UWKS
+            </p>
+
+        </div>
+    </main>
+
+</body>
+</html>

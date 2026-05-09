@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - PEMIRA UWKS 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex">
+
+    <!-- Sidebar -->
+    <aside class="w-64 bg-slate-900 text-slate-300 flex flex-col sticky top-0 h-screen">
+        <div class="p-6 border-b border-slate-800 flex items-center gap-3">
+            <img src="../assets/logo-uwks.png" alt="Logo UWKS" class="w-8 h-8 rounded-lg">
+            <span class="font-black text-white tracking-tighter uppercase text-sm">Admin Panel</span>
+        </div>
+        
+        <nav class="flex-grow p-4 space-y-2 mt-4">
+            <a href="#" class="flex items-center gap-3 px-4 py-3 bg-blue-600 text-white rounded-xl font-bold text-sm transition-all">
+                <i class="fa-solid fa-chart-line"></i> Dashboard
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 hover:text-white rounded-xl font-semibold text-sm transition-all">
+                <i class="fa-solid fa-users"></i> Manajemen Pemilih
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 hover:text-white rounded-xl font-semibold text-sm transition-all">
+                <i class="fa-solid fa-user-tie"></i> Manajemen Kandidat
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-slate-800 hover:text-white rounded-xl font-semibold text-sm transition-all">
+                <i class="fa-solid fa-file-invoice"></i> Laporan Akhir
+            </a>
+        </nav>
+
+        <div class="p-4 border-t border-slate-800">
+            <div class="bg-slate-800 p-4 rounded-xl flex items-center gap-3">
+                <div class="w-8 h-8 bg-slate-600 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-user-shield text-xs"></i>
+                </div>
+                <div class="overflow-hidden">
+                    <p class="text-xs font-bold text-white truncate">Admin KPU</p>
+                    <p class="text-[10px] text-slate-500 truncate">admin@uwks.ac.id</p>
+                </div>
+            </div>
+            <button class="w-full mt-4 flex items-center justify-center gap-2 px-4 py-2 text-xs font-bold text-red-400 hover:bg-red-500/10 rounded-lg transition-all uppercase">
+                <i class="fa-solid fa-right-from-bracket"></i> Keluar
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex flex-col">
+        <!-- Top Bar -->
+        <header class="h-20 bg-white border-b border-slate-200 px-8 flex items-center justify-between sticky top-0 z-10">
+            <div>
+                <h2 class="text-xl font-black text-slate-800 uppercase tracking-tight">Ringkasan Statistik</h2>
+                <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Pantauan Pemungutan Suara Real-time</p>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="bg-emerald-50 text-emerald-600 px-3 py-1.5 rounded-full text-[10px] font-black uppercase flex items-center gap-2 border border-emerald-100">
+                    <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                    Sistem Online
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Grid -->
+        <div class="p-8 space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center gap-4">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Total Pemilih</p>
+                        <p class="text-2xl font-black text-slate-800">2.450</p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center gap-4">
+                    <div class="w-12 h-12 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-check-double"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Suara Masuk</p>
+                        <p class="text-2xl font-black text-slate-800">1.120</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center gap-4">
+                    <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Belum Memilih</p>
+                        <p class="text-2xl font-black text-slate-800">1.330</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm flex items-center gap-4">
+                    <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-black text-slate-400 uppercase tracking-widest">Partisipasi</p>
+                        <p class="text-2xl font-black text-slate-800">45.7%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chart Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Grafik Utama -->
+                <div class="lg:col-span-2 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <div class="flex items-center justify-between mb-8">
+                        <h3 class="font-black text-slate-800 uppercase text-sm tracking-tight">Perolehan Suara Kandidat</h3>
+                        <span class="text-[10px] font-bold text-slate-400 uppercase italic">Terakhir diperbarui: 10:25 WIB</span>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Kandidat 1 -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-bold uppercase">
+                                <span>1. Fatih & Dinda</span>
+                                <span>520 Suara (46%)</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden">
+                                <div class="bg-blue-600 h-full rounded-full" style="width: 46%"></div>
+                            </div>
+                        </div>
+                        <!-- Kandidat 2 -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-bold uppercase text-slate-400">
+                                <span>2. Kandidat Kosong</span>
+                                <span>400 Suara (36%)</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden">
+                                <div class="bg-slate-400 h-full rounded-full" style="width: 36%"></div>
+                            </div>
+                        </div>
+                        <!-- Kandidat 3 -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-xs font-bold uppercase text-slate-400">
+                                <span>3. Kandidat Kosong</span>
+                                <span>200 Suara (18%)</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-4 rounded-full overflow-hidden">
+                                <div class="bg-slate-300 h-full rounded-full" style="width: 18%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kontrol Cepat -->
+                <div class="bg-slate-900 p-8 rounded-3xl shadow-xl flex flex-col justify-between text-white">
+                    <div>
+                        <h3 class="font-black text-white uppercase text-sm tracking-tight mb-2">Kontrol Sistem</h3>
+                        <p class="text-[10px] text-slate-400 font-medium uppercase tracking-widest">Aksi cepat status pemilihan</p>
+                    </div>
+
+                    <div class="space-y-4 my-8">
+                        <div class="flex items-center justify-between p-4 bg-slate-800 rounded-2xl border border-slate-700">
+                            <span class="text-xs font-bold uppercase">Status TPS</span>
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[9px] font-black uppercase">Terbuka</span>
+                        </div>
+                        <p class="text-[10px] text-slate-500 font-medium italic">Menutup TPS akan menghentikan seluruh proses voting secara otomatis bagi mahasiswa.</p>
+                    </div>
+
+                    <button class="w-full bg-red-600 hover:bg-red-700 text-white font-black py-4 rounded-2xl transition-all shadow-lg shadow-red-600/20 uppercase tracking-widest text-xs">
+                        Tutup Pemilihan Sekarang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

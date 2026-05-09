@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Voting PEMIRA UWKS 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .card-shadow { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <img src="assets/logo-uwks.png" alt="Logo UWKS" class="w-10 h-10 rounded-lg">
+                <div>
+                    <h1 class="text-lg font-bold leading-none text-gray-800 uppercase tracking-tight">Sistem E-Voting</h1>
+                    <p class="text-sm font-semibold text-gray-500 uppercase">PEMIRA UWKS 2026</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm uppercase text-gray-600">
+                <a href="#" onclick="showPage('home')" class="hover:text-yellow-600 transition-colors">Beranda</a>
+                <a href="#" class="hover:text-yellow-600 transition-colors">Tata Cara</a>
+                <a href="#" class="hover:text-yellow-600 transition-colors">Dokumentasi</a>
+            </nav>
+
+            <div class="flex items-center gap-3 border-l pl-6 border-gray-200">
+                <div class="text-right hidden sm:block">
+                    <p class="text-xs font-bold text-gray-400 uppercase">Hai, Pemilih!</p>
+                    <p class="text-sm font-semibold text-gray-800 uppercase">Selamat Memilih</p>
+                </div>
+                <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center border border-gray-300">
+                    <i class="fa-solid fa-user text-gray-500"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        
+        <!-- Halaman Utama: Daftar Kandidat -->
+        <div id="home-page" class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-3xl font-extrabold text-gray-900 uppercase">Selamat Datang di PEMIRA UWKS 2026</h2>
+                <p class="text-gray-500">Kenali kandidat Anda sebelum memberikan suara. Pilihan Anda menentukan masa depan kampus.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
+                <!-- Kandidat 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 flex flex-col">
+                    <div class="relative bg-gray-200 aspect-[4/3] flex items-center justify-center overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-yellow-500 text-white font-black text-2xl w-12 h-12 flex items-center justify-center rounded-lg shadow-lg">1</span>
+                        <div class="flex gap-1 h-full w-full">
+                            <div class="w-1/2 bg-gray-300 border-r border-white flex items-center justify-center text-gray-400">
+                                <i class="fa-solid fa-user-tie text-6xl"></i>
+                            </div>
+                            <div class="w-1/2 bg-gray-300 flex items-center justify-center text-gray-400">
+                                <i class="fa-solid fa-user-tie text-6xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col text-center">
+                        <h3 class="font-bold text-lg uppercase leading-tight mb-4">Fatih Adi Pratama & Dinda Amalia</h3>
+                        <div class="text-sm text-gray-600 mb-6 flex-grow">
+                            <p class="font-bold text-gray-800 mb-1">Visi Singkat:</p>
+                            <p>"Mewujudkan BEM yang Inovatif dan Transparan demi kemajuan mahasiswa."</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button onclick="showPage('profile-1')" class="flex-none bg-gray-100 hover:bg-gray-200 text-gray-700 w-12 h-12 rounded-xl transition-all flex items-center justify-center">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <button class="flex-grow bg-blue-900 hover:bg-blue-950 text-white font-bold py-3 px-6 rounded-xl transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-circle-check"></i> VOTE KANDIDAT 1
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kandidat 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 flex flex-col opacity-60">
+                    <div class="relative bg-gray-200 aspect-[4/3] flex items-center justify-center overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-gray-500 text-white font-black text-2xl w-12 h-12 flex items-center justify-center rounded-lg">2</span>
+                        <div class="flex gap-1 h-full w-full grayscale">
+                            <div class="w-1/2 bg-gray-300 border-r border-white"></div>
+                            <div class="w-1/2 bg-gray-300"></div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col text-center">
+                        <h3 class="font-bold text-lg uppercase leading-tight mb-4 text-gray-500">Placeholder Kandidat 2</h3>
+                        <p class="text-sm text-gray-400 italic mb-6">Informasi belum tersedia</p>
+                        <div class="flex gap-2">
+                            <button class="flex-none bg-gray-100 text-gray-400 w-12 h-12 rounded-xl cursor-not-allowed">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <button class="flex-grow bg-gray-200 text-gray-400 font-bold py-3 px-6 rounded-xl cursor-not-allowed">
+                                VOTE KANDIDAT 2
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kandidat 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 flex flex-col opacity-60">
+                    <div class="relative bg-gray-200 aspect-[4/3] flex items-center justify-center overflow-hidden">
+                        <span class="absolute top-4 left-4 bg-gray-500 text-white font-black text-2xl w-12 h-12 flex items-center justify-center rounded-lg">3</span>
+                        <div class="flex gap-1 h-full w-full grayscale">
+                            <div class="w-1/2 bg-gray-300 border-r border-white"></div>
+                            <div class="w-1/2 bg-gray-300"></div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col text-center">
+                        <h3 class="font-bold text-lg uppercase leading-tight mb-4 text-gray-500">Placeholder Kandidat 3</h3>
+                        <p class="text-sm text-gray-400 italic mb-6">Informasi belum tersedia</p>
+                        <div class="flex gap-2">
+                            <button class="flex-none bg-gray-100 text-gray-400 w-12 h-12 rounded-xl cursor-not-allowed">
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </button>
+                            <button class="flex-grow bg-gray-200 text-gray-400 font-bold py-3 px-6 rounded-xl cursor-not-allowed">
+                                VOTE KANDIDAT 3
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Halaman Profil Detail Kandidat -->
+        <div id="profile-page" class="hidden space-y-6">
+            <button onclick="showPage('home')" class="text-blue-900 font-bold flex items-center gap-2 hover:underline">
+                <i class="fa-solid fa-arrow-left"></i> Kembali ke Daftar Kandidat
+            </button>
+
+            <div class="bg-white rounded-2xl overflow-hidden card-shadow border border-gray-100 p-8">
+                <div class="border-b pb-6 mb-8">
+                    <h2 class="text-2xl font-black text-gray-900 uppercase">Profil Kandidat 1: Fatih Adi Pratama & Dinda Amalia</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                    <!-- Sisi Foto -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <div class="bg-gray-200 rounded-xl aspect-[3/4] flex items-center justify-center text-gray-400">
+                                    <i class="fa-solid fa-user-tie text-7xl"></i>
+                                </div>
+                                <p class="text-center font-bold text-sm uppercase">Ketua</p>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="bg-gray-200 rounded-xl aspect-[3/4] flex items-center justify-center text-gray-400">
+                                    <i class="fa-solid fa-user-tie text-7xl"></i>
+                                </div>
+                                <p class="text-center font-bold text-sm uppercase">Wakil Ketua</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sisi Data -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold text-gray-400 uppercase">Nama Ketua:</p>
+                                <p class="text-lg font-bold text-gray-800">Fatih Adi Pratama</p>
+                                <p class="text-xs font-bold text-gray-400 uppercase mt-4">Prodi Ketua:</p>
+                                <p class="text-md font-semibold text-gray-700">Teknik Informatika</p>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold text-gray-400 uppercase">Nama Wakil Ketua:</p>
+                                <p class="text-lg font-bold text-gray-800">Dinda Amalia</p>
+                                <p class="text-xs font-bold text-gray-400 uppercase mt-4">Prodi Wakil Ketua:</p>
+                                <p class="text-md font-semibold text-gray-700">Sistem Informasi</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-900 p-6 rounded-r-xl">
+                            <h4 class="font-black text-blue-900 uppercase mb-4 text-sm">Visi & Misi Pasangan Calon</h4>
+                            <div class="space-y-4 text-gray-700">
+                                <div>
+                                    <p class="font-bold text-xs uppercase text-blue-800 mb-1 italic">Visi:</p>
+                                    <p class="italic">"Mewujudkan BEM yang inovatif dan transparan demi kemajuan mahasiswa Universitas Wijaya Kusuma Surabaya."</p>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-xs uppercase text-blue-800 mb-1 italic">Misi:</p>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Meningkatkan partisipasi aktif mahasiswa dalam kegiatan kampus.</li>
+                                        <li>Menjamin transparansi anggaran dan program kerja organisasi.</li>
+                                        <li>Memperkuat sinergi antara organisasi mahasiswa dan pihak rektorat.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 pt-8 border-t flex justify-center">
+                    <button class="bg-blue-900 hover:bg-blue-950 text-white font-bold py-4 px-12 rounded-2xl shadow-xl transition-all flex items-center gap-3 text-lg">
+                        <i class="fa-solid fa-circle-check"></i> VOTE KANDIDAT 1 SEKARANG
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-12 border-t border-gray-200 py-8 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+            <p class="text-sm font-bold text-gray-500 uppercase">Diselenggarakan oleh: KPU Universitas Wijaya Kusuma Surabaya</p>
+            <p class="text-xs text-gray-400">© 2026 PEMIRA UWKS. Semua hak dilindungi undang-undang.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            const home = document.getElementById('home-page');
+            const profile = document.getElementById('profile-page');
+            
+            if (pageId === 'home') {
+                home.classList.remove('hidden');
+                profile.classList.add('hidden');
+                window.scrollTo(0, 0);
+            } else if (pageId === 'profile-1') {
+                home.classList.add('hidden');
+                profile.classList.remove('hidden');
+                window.scrollTo(0, 0);
+            }
+        }
+    </script>
+</body>
+</html>
